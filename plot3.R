@@ -12,5 +12,5 @@ bal<-subset(NEI,fips=="24510")
 dbal<-aggregate(Emissions ~ year + type, bal, sum)
 #extracting and tidying data
 g<-ggplot(dbal,aes(x=year,y=Emissions))
-g+geom_point()+facet_grid(.~type)+geom_line(color="blue")
+g+geom_point()+facet_grid(.~type)+geom_line(color="blue")+ggtitle("Emissions from 1999–2008 in Baltimore City by source")
 #plotting
